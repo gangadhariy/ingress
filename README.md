@@ -11,4 +11,6 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 it will create namespace as ingress-nginx and some pods there will be three pods 2 will be in completed state ignore them and one will be running as nginx controller
 And one nodeport svc browse that port with node ip then create ingress with provided yaml in this repository
 
-/kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/baremetal/deploy.yaml
+change the path and service name and namespace ingress name as you want and apply
+
+kubectl apply -f claudie-backend-srv.yaml
