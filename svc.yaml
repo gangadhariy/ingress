@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: nginx-ingress
+    app.kubernetes.io/name: nginx-ingress
+  name: nginx-ingress-controller
+  namespace: nginx-ingress
+spec:
+  type: NodePort
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+      nodePort: 32080  # You can specify a port number here or let Kubernetes assign one
+    - name: https
+      port: 443
+      targetPort: 443
+      nodePort: 32443  # You can specify a port number here or let Kubernetes assign one
+  selector:
+    app: nginx-ingress
+    app.kubernetes.io/name: nginx-ingress
