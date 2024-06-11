@@ -14,3 +14,11 @@ And one nodeport svc browse that port with node ip then create ingress with prov
 change the path and service name and namespace ingress name as you want and apply
 
 kubectl apply -f claudie-backend-srv.yaml
+
+then check the ingress 
+
+kubectl get ingress -n claudie-backend 
+
+if there is no class then apply the class.yaml file
+
+kubectl apply -f class.yaml
