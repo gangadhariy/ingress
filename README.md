@@ -1,6 +1,6 @@
-<h1 allign='center'>HOW TO INSTALL NGINX INGRESS CONTROLLER</h1>
+<h1 allign="center">HOW TO INSTALL NGINX INGRESS CONTROLLER</h1>
 
-##Go to this document
+## Go to this document
 
 https://github.com/kubernetes/ingress-nginx/blob/main/docs/deploy/index.md#bare-metal-clusters
 
@@ -19,11 +19,11 @@ change the path and service name and namespace ingress name as you want and appl
 ```
 kubectl apply -f claudie-backend-srv.yaml
 ```
-##then check the ingress 
+## Then check the ingress 
 ```
 kubectl get ingress -n claudie-backend 
 ```
-##if there is no class then apply the class.yaml file
+## If there is no class then apply the class.yaml file
 ```
 kubectl apply -f class.yaml
 ```
